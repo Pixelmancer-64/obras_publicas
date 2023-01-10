@@ -232,7 +232,7 @@ def editar_fiscal(request, id):
     form=Form_Fiscal(instance=fiscal)
     if request.method=='POST':  
         form_=Form_Fiscal(request.POST, instance=fiscal)           
-        if form_.is_valid():
+        if form_.is_valid():    
             fiscal=form_.save()                         
             context={
                 'form': form_,
